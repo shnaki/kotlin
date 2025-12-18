@@ -1,14 +1,25 @@
 package model
 
-class Character(var name: String, var hp: Int) {
+class Character {
+    var name: String = ""
+        set(value) {
+            field = if (value == "") {
+                println("名前が正しくありません")
+                "NO NAME"
+            } else {
+                value
+            }
+        }
+        get() = field + "さん"
+    var hp: Int
 
-    constructor(name: String) : this(name, 50) {
-        println("** セカンダリ  **")
+    val length: Int
+        get() = name.length
+
+    constructor(name: String, hp: Int) {
+        this.name = name
+        this.hp = hp
     }
-
-    constructor(hp: Int) : this("プレイヤー3", hp)
-
-    constructor() : this("プレイヤー4", 10)
 
     fun showStatus() {
         println("名前: $name")
