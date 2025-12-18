@@ -4,10 +4,14 @@ import model.Character
 
 fun main() {
     /**
-     * ・オブジェクト指向
-     * ・プロパティとメソッドをまとめて管理する
+     * ・(プライマリ) コンストラクタ
+     * ・プロパティ宣言
      */
 
-    val player = Character()
-    player.showStatus()
+    val p1 = Character("プレイヤー1", 100)
+    p1.showStatus()
+    println()
+
+    val p2 = Character("プレイヤー2", 200)
+    p2.showStatus()
 }

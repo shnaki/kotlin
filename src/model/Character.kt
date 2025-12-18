@@ -1,8 +1,6 @@
 package model
 
-class Character {
-    var name: String = "主人公"
-    var hp: Int = 100
+class Character(var name: String, var hp: Int) {
 
     fun showStatus() {
         println("名前: $name")
