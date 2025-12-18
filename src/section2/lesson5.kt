@@ -1,3 +1,5 @@
+package section2
+
 fun main() {
     /**
      * ・変数 (var)  : 変更可能

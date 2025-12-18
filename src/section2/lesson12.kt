@@ -1,3 +1,5 @@
+package section2
+
 fun main() {
     /**
      * ・コレクション: 複数の値(要素)をまとめて扱う

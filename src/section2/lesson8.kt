@@ -1,3 +1,5 @@
+package section2
+
 fun main() {
     /**
      * ・null 安全性    (Null Safety)

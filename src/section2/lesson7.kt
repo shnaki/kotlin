@@ -1,3 +1,5 @@
+package section2
+
 fun main() {
     /**
      * ・型変換メソッド (toXX)

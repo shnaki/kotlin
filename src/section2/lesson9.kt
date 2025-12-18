@@ -1,3 +1,5 @@
+package section2
+
 fun main() {
     /**
      * 配列: 複数の値(要素)を保持する箱
