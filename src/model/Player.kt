@@ -10,4 +10,9 @@ class Player : Character {
     fun attack() {
         println("${name}の攻撃！${atk}のダメージ！")
     }
+
+    override fun showStatus() {
+        super.showStatus()
+        println("攻撃力: $atk")
+    }
 }
