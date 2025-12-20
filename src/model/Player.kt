@@ -12,7 +12,8 @@ class Player : Character {
     }
 
     override fun showStatus() {
-        super.showStatus()
+        println("名前: $name")
+        println("HP: $hp")
         println("攻撃力: $atk")
     }
 }

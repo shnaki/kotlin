@@ -1,15 +1,21 @@
 package section6
 
+import model.Character
+import model.Enemy
 import model.Player
 
 fun main() {
     /**
-     * ・オーバーライド
-     *     : スーパークラスのメソッドをサブクラスで上書きする
-     * ・open 修飾子 : オーバーライドを許可する
+     * ・abstract : オーバーライドを強制させる
+     *     >> 抽象クラス、抽象メソッド
+     * ・ポリモーフィズム、多態性
      */
 
-    val player = Player("プレイヤー", 100, 10)
-    player.attack()
-    player.showStatus()
+    val p = Player("プレイヤー", 100, 10)
+    val e = Enemy("エネミー", 50, 5)
+    val list: List<Character> = listOf(p, e)
+    for (obj in list) {
+        println("== ${obj::class} ==")
+        obj.showStatus()
+    }
 }
