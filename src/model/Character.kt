@@ -1,7 +1,7 @@
 package model
 
-abstract class Character(val name: String, val hp: Int) {
-    protected open fun showStatus() {
+open class Character(val name: String, var hp: Int) {
+    open fun showStatus() {
         println("名前: $name")
         println("HP: $hp")
     }
