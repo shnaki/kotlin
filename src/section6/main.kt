@@ -1,21 +1,19 @@
 package section6
 
-import model.Character
-import model.Enemy
 import model.Player
 
 fun main() {
     /**
-     * ・abstract : オーバーライドを強制させる
-     *     >> 抽象クラス、抽象メソッド
-     * ・ポリモーフィズム、多態性
+     * ・アクセス修飾子、可視性修飾子
+     * ・internal  : 同一モジュール内からアクセス可能
+     * ・public    : すべてのクラスからアクセス可能
+     * ・protected : 現在のクラス及びサブクラスからアクセス可能
+     * ・private   : 現在のクラスからのみアクセス可能
      */
 
     val p = Player("プレイヤー", 100, 10)
-    val e = Enemy("エネミー", 50, 5)
-    val list: List<Character> = listOf(p, e)
-    for (obj in list) {
-        println("== ${obj::class} ==")
-        obj.showStatus()
-    }
+    p.showStatus()
+
+    // private プロパティにはアクセスできない。
+//    println("プレイヤーの攻撃力: ${p.atk}")
 }
