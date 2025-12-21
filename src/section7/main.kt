@@ -1,17 +1,14 @@
 package section7
 
-import model.Player
+import model.AppInfo
 
 fun main() {
     /**
-     * ・オブジェクト式
+     * ・オブジェクト宣言
+     * ・(シングルトン)
      */
 
-    val weakPlayer = object : Player("モブ", 10, 1, 1) {
-        override fun attack() {
-            println("失敗！！")
-        }
-    }
-
-    weakPlayer.attack()
+    AppInfo.display()
+    AppInfo.name = "ZZ GAME"
+    AppInfo.display()
 }
