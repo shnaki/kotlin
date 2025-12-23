@@ -1,14 +1,18 @@
 package section7
 
-import model.AppInfo
+import model.Enemy
 
 fun main() {
     /**
-     * ・オブジェクト宣言
-     * ・(シングルトン)
+     * ・コンパニオンオブジェクト
      */
 
-    AppInfo.display()
-    AppInfo.name = "ZZ GAME"
-    AppInfo.display()
+    val e1 = Enemy("敵1", 100, 10)
+    Enemy.showCount()
+
+    val e2 = Enemy("敵2", 100, 10)
+    Enemy.showCount()
+
+    val e3 = Enemy("敵3", 100, 10)
+    Enemy.showCount()
 }
